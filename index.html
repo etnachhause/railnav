@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<title>railnav2</title>
+  		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<!-- iOS WebApp Metatags -->
+		<meta name="viewport" content="width=device-width, initial-scale=1 , maximum-scale=1, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes" >
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+		<!-- Homescreen Icons für iOS und Android -->
+
+		<link rel="apple-touch-icon"  href="bilder/railnav_114.png">
+		<link rel="icon" type="image/x-icon" href="bilder/favicon.ico">
+  		<link rel="manifest" href="manifest.json">
+		<link rel="apple-touch-icon-precomposed" href="bilder/railnav_72.png" sizes="72x72" />
+		<link rel="apple-touch-icon-precomposed" href="bilder/railnav_144.png" sizes="144x144" />
+		<link rel="apple-touch-icon-precomposed" href="bilder/railnav_114.png" sizes="114x114" />
+		<link rel="apple-touch-icon-precomposed" href="bilder/railnav_57.png" />
+
+		<script src="javascript/jquery-2.2.0.min.js" type="text/javascript"></script>
+		<script src="javascript/chui-3.9.2.js" type="text/javascript"></script>
+		<script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+		<script src="http://maps.googleapis.com/maps/api/js"></script>
+
+		<!-- CSS Stylesheet -->
+		<link href="styles/reset.css" rel="stylesheet" type="text/css">
+		<link href="styles/geopp-ios.css" rel="stylesheet" type="text/css">
+
+
+
+	</head>
+	<body>
+	<!--Hauptmenue  -->
+		<nav class="current">
+
+		  <h1>RaiLNav</h1>
+
+		</nav>
+		<article id="hauptmenue" class="current">
+  		<section>
+
+  		<div id='segmentedPanel' class='horizontal centered'></div>
+
+		<ul class='list'>
+		    <li class='comp' data-goto='streckekilometer'>
+		        <div>
+		            <h3>Strecke/Kilometer</h3>
+		        </div>
+		        <aside>
+		            <span class='nav'></span>
+		        </aside>
+		    </li>
+		    <li class='comp' data-goto='koordinate'>
+		        <div>
+		            <h3>Koordinate </h3>
+		        </div>
+		        <aside>
+		            <span class='nav'></span>
+		        </aside>
+		    </li>
+		     <li class='comp' data-goto='GoogleMapsManually'>
+				<div id="showmapmanually">
+					<h3>Suche in Karte</h3>
+				</div>
+				<aside>
+					<span class='nav'></span>
+				</aside>
+		    </li>
+		     <li class='comp' data-goto='position'>
+				<div>
+					<h3>Standort bestimmen</h3>
+				</div>
+				<aside>
+					<span class='nav'></span>
+				</aside>
+		    </li>
+		     <li class='comp' data-goto='license'>
+				<div>
+					<h3>Lizenz</h3>
+				</div>
+				<aside>
+					<span class='nav'></span>
+				</aside>
+		    </li>
+		     <li class='comp' data-goto='info'>
+				<div>
+					<h3>Info</h3>
+				</div>
+				<aside>
+					<span class='nav'></span>
+				</aside>
+		    </li>
+		     <li class='comp' data-goto='logouts'>
+				<div>
+					<h3>An/Ab-melden</h3>
+				</div>
+				<aside>
+					<span class='nav'></span>
+				</aside>
+		    </li>
+		</ul>
+  </section>
+</article>
+
+<!--Strecke und Kilometer  -->
+
+<nav class="next">
+		<button   class='back'>zurück</button>
+    <h1>Strecke</h1>
+  </nav>
+  <article id="streckekilometer" class="next">
+
+		  <section>
+			<h2>Geben Sie bitte die folgenden Werte ein:</h2>
+			<ul class="list">
+				<li>
+				  <div>
+					<h3>Streckennummer</h3>
+
+				  </div>
+				  <aside>
+					<input autocorrect="off"  input type="text"  id="track" placeholder="1700" required>
+				  </aside>
+				  <div>
+					<h3>Strecken Kilometer</h3>
+
+				  </div>
+				  <aside>
+					<input autocorrect="off"  type="text" id="kilometer" placeholder="34.6415" required>
+				  </aside>
+				</li>
+				</ul>
+				<p><br>
+				</p>
+				<ul class="list">
+				<li class='comp' data-goto='GoogleMapsKilometer'>
+					<div id="showmapkilometer">
+						<h3>Zeige in Karte</h3>
+
+					</div>
+					<aside>
+						<span class='nav'></span>
+					</aside>
+				</li>
+				 <li class='comp' data-goto='GoogleMapsNavigate'>
+					<div id="navigatekilometer">
+						<h3>Navigiere zu</h3>
+
+					</div>
+					<aside>
+						<span class='nav'></span>
+					</aside>
+				</li>
+
+			</ul>
+		  </section>
+		</article>
+<!--Koordinate eingeben  -->
+		<nav class="next">
+		<button   class='back'>zurück</button>
+		  <h1>Koordinate</h1>
+		</nav>
+		<article id="koordinate" class="next">
+		  <section>
+			<h2>Wählen Sie die Schreibweise</h2>
+			<ul class="list">
+			<li class='comp' data-goto='sexagesimal'>
+				<div>
+					<h3>Sexagesimal</h3>
+
+				</div>
+				<aside>
+					<span class='nav'></span>
+				</aside>
+			</li>
+			 <li class='comp' data-goto='dezimal'>
+				<div>
+					<h3>Dezimal</h3>
+
+				</div>
+				<aside>
+					<span class='nav'></span>
+				</aside>
+		    </li>
+
+
+			</ul>
+		  </section>
+		</article>
+<!--Kartensuche  -->
+		<nav class="next">
+
+		  <button   class='back'>zurück</button>
+		  <h1>Suche in Karte</h1>
+		</nav>
+		<article id="searchmap" class="next">
+		  <section>
+			<h2>Kartensuche</h2>
+
+		  </section>
+		</article>
+<!-- eigene Position  -->
+		<nav class="next">
+		<button   class='back'>zurück</button>
+		  <h1>Standort</h1>
+		</nav>
+		<article id="position" class="next">
+		  <section>
+
+			<ul class="list">
+			<li class='comp' data-goto='GoogleMapsDirect'>
+				<div id="showmapposition">
+					<h3>Zeige in Karte</h3>
+
+				</div>
+				<aside>
+					<span class='nav'></span>
+				</aside>
+			</li>
+			 <li class='comp' data-goto='showlist'>
+				<div id="showlistposition">
+					<h3>Listenansicht</h3>
+
+				</div>
+				<aside>
+					<span class='nav'></span>
+				</aside>
+		    </li>
+		    	</ul>
+		  </section>
+		</article>
+<!-- Lizenz  -->
+		<nav class="next">
+		 <button   class='back'>zurück</button>
+		  <h1>Lizenz</h1>
+		</nav>
+		<article id="license" class="next">
+		  <section>
+			<ul class="list">
+			  	 <li class='comp'>
+					<aside>
+						<img title='Lizenz' src="bilder/geopp.png" height="80px">
+					</aside>
+					<div style="text-align: left">
+						<h3>Lizenz</h3>
+						<h4>Typ: Freie Lizenz</h4>
+						<p>Gültig bis: 16.03.2016<br>
+						Registriert für: andreas</p>
+					</div>
+			  	</li>
+			</ul>
+			<p><br></p>
+			<ul class="list">
+			<li class='comp' data-goto='licenceaccept'>
+				<div>
+					<h3>Lizenz erwerben</h3>
+				</div>
+				<aside>
+					<span class='nav'></span>
+				</aside>
+			</li>
+			</ul>
+		  </section>
+		</article>
+<!-- Lizenz chooser -->
+	<nav class="next">
+	 <button   class='back'>zurück</button>
+	  <h1>Lizenz</h1>
+	</nav>
+	<article id="licensechoose" class="next">
+	  <section>
+
+		<ul class="list">
+		<li class='comp' data-goto='dbemployer'>
+			<div>
+				<h3>DB Mitarbeiter</h3>
+			</div>
+			<aside>
+				<span class='nav'></span>
+			</aside>
+		</li>
+		 <li class='comp' data-goto='employer'>
+			<div>
+				<h3>Lizenzschlüssel eingeben</h3>
+
+			</div>
+			<aside>
+				<span class='nav'></span>
+			</aside>
+		</li>
+
+		</ul>
+	  </section>
+	</article>
+<!-- Lizenz Datenschutz -->
+	<nav class="next">
+	  <button   class='back'>zurück</button>
+	  <h1>Bedingungen</h1>
+	</nav>
+	<article id="licenceaccept" class="next">
+	  <section>
+		<ul class="list">
+		<li class='comp' data-goto='termsofuse'>
+			<div>
+				<h3>Lizenzbedingungen</h3>
+			</div>
+			<aside>
+				<span class='nav'></span>
+			</aside>
+		</li>
+		 <li class='comp' data-goto='protection'>
+			<div>
+				<h3>Datenschutzrichtlinien</h3>
+			</div>
+			<aside>
+				<span class='nav'></span>
+			</aside>
+		</li>
+		</ul>
+		<ul class='list' ui-implements='form'>
+			<li id="acceptterms" class='comp'>
+				<div>
+				  <label id='acceptLabel' for='acceptToTermsofuse'>Ich bin einverstanden</label>
+				</div>
+				<aside>
+				  <span class='switch' id="acceptToTermsofuse" class="off"><input type="checkbox"></span>
+				</aside>
+			</li>
+		</ul>
+      <button class='action' id="submitAccept">Akzeptieren</a> </button>
+	  </section>
+	</article>
+<!-- Datenschutz -->
+	<nav class="next">
+	 <button   class='back'>zurück</button>
+	  <h1>Datenschutzrichtlinien</h1>
+	</nav>
+	<article id="protection" class="next">
+	  <section>
+ 			<div style="text-align: left" id="licensetext"/>
+	  </section>
+</article>
+<!-- Nutungsbedingungen -->
+	<nav class="next">
+	  <button   class='back'>zurück</button>
+	  <h1>Lizenzbedingungen</h1>
+	</nav>
+	<article id="termsofuse" class="next">
+	  <section>
+			<div style="text-align: left" id="termsofusetext"/>
+	  </section>
+</article>
+<!-- Information  -->
+		<nav class="next">
+		 <button   class='back'>zurück</button>
+		  <h1>Info</h1>
+		</nav>
+		<article id="info" class="next">
+		  <section>
+
+			<ul class="list">
+				 <li class='comp'>
+					<aside>
+						<img title='RaiLNav Ortung Live 2.0' src="bilder/geopp.png" height="80px">
+					</aside>
+					<div style="text-align: left">
+						<h3>RaiLNav Ortung Live 2.0</h3>
+						<p>Version: 16.02</p>
+						<p>Build: 20160213</p>
+					</div>
+				</li>
+			</ul>
+			<p><br></p>
+			<ul class="list">
+			  	 <li class='comp'>
+					<aside>
+						<img title='Lizenz' src="bilder/geopp.png" height="80px">
+					</aside>
+					<div style="text-align: left">
+						<h3>Lizenz</h3>
+						<h4>Typ: Freie Lizenz</h4>
+
+
+
+						<p>Gültig bis: 16.03.2016<br>
+						Registriert für: andreas</p>
+					</div>
+			  	</li>
+			</ul>
+			<p><br></p>
+			<ul class="list">
+			 	<li class='comp'>
+					<aside>
+						<img title='Copyright' src="bilder/geopp.png" height="80px">
+					</aside>
+				<div style="text-align: left">
+						<h5>Copyright 2016</h5>
+						<h2>Geo++ GmbH</h2>
+						<p>Steinriede 8</p>
+						<p>30827 Garbsen</p>
+						<p>www.geopp.de</p>
+						<p>info@geopp.de</p>
+					</div
+			  	</li>
+
+			</ul>
+		  </section>
+		</article>
+<!--Beenden  -->
+		<nav class="next">
+		 <button   class='back'>zurück</button>
+		  <h1>Anmelden</h1>
+		</nav>
+		<article id="logouts" class="next">
+		  <section>
+			<ul class="list">
+			<li class='comp' data-goto='login'>
+				<div>
+					<h3>anmelden</h3>
+				</div>
+				<aside>
+					<span class='nav'></span>
+				</aside>
+			</li>
+			<li class='comp' data-goto='logout'>
+				<div>
+					<h3>abmelden</h3>
+				</div>
+				<aside>
+					<span class='nav'></span>
+				</aside>
+			</li>
+			<li class='comp' data-goto='forgotpassword'>
+				<div>
+					<h3>Passwort vergessen</h3>
+				</div>
+				<aside>
+					<span class='nav'></span>
+				</aside>
+			</li>
+			<li class='comp' data-goto='changepassword'>
+				<div>
+					<h3>Passwort ändern</h3>
+				</div>
+				<aside>
+					<span class='nav'></span>
+				</aside>
+			</li>
+
+			 <li class='comp' data-goto='quit'>
+				<div>
+					<h3>beenden</h3>
+				</div>
+				<aside>
+					<span class='nav'></span>
+				</aside>
+		    </li>
+
+			</ul>
+		  </section>
+		</article>
+<!--Sexagesimal  -->
+		<nav class="next">
+		  <button   class='back'>zurück</button>
+		  <h1>Sexagesimal</h1>
+
+	<!--	  <button id="haupt5" class='align-flush'>Menü</button>-->
+
+		</nav>
+		<article id="sexagesimal" class="next">
+		  <section>
+			<h2>Koordinate eingeben</h2>
+			<ul class="list">
+			<li>
+				<div>
+					<h3>Breite</h3>
+
+				</div>
+				<aside>
+					<input autocorrect="off"  type="text" id="lattitudesexagesimal" placeholder="N 50°5'33.7''" required>
+				</aside>
+				<div>
+					<h3>Länge</h3>
+
+				</div>
+				<aside>
+					<input autocorrect="off"  type="text" id="longitudesexagesimal" placeholder="E 8°37'44.5''" required>
+			    </aside>
+			  </li>
+ 			<li class='comp' data-goto='GoogleMapsCoordinate'>
+				<div id="showmapsexagesimal">
+					<h3>Zeige in Karte</h3>
+				</div>
+				<aside>
+					<span class='nav'></span>
+				</aside>
+			</li>
+			 <li class='comp' data-goto='showlist'>
+				<div id="showlistsexagesimal">
+					<h3>Listenansicht</h3>
+
+				</div>
+				<aside>
+					<span class='nav'></span>
+				</aside>
+		    </li>
+			<li class='comp' >
+				<div id="navigatekilometer2">
+					<h3>Navigiere zu</h3>
+				</div>
+				<aside>
+					<span class='nav'></span>
+				</aside>
+			</li>
+			</ul>
+		  </section>
+		</article>
+<!--Dezimal  -->
+		<nav class="next">
+		 <button   class='back'>zurück</button>
+		  <h1>Dezimal</h1>
+	<!--		  <button  id="haupt4"<a href="#sexagesimal" class="button nextto">Menü</a> </button> -->
+		</nav>
+		<article id="dezimal" class="next">
+		  <section>
+			<h2>Koordinate eingeben</h2>
+			<ul class="list">
+			<li>
+				<div>
+					<h3>Breite</h3>
+
+				</div>
+				<aside>
+					<input autocorrect="off"  type="text" id="lattitudedecimal" placeholder=" 50.092694" required>
+				</aside>
+				<div>
+					<h3>Länge</h3>
+
+				</div>
+				<aside>
+					<input autocorrect="off"  type="text" id="longitudedecimal" placeholder="8.6290777" required>
+				</aside>
+			  </li>
+			  <li class='comp' data-goto='GoogleMapsCoordinate'>
+				<div id="showmapdecimal">
+					<h3>Zeige in Karte</h3>
+
+				</div>
+				<aside>
+					<span class='nav'></span>
+				</aside>
+			</li>
+			 <li class='comp' data-goto='showlist'>
+				<div id="showlistdecimal">
+					<h3>Listenansicht</h3>
+
+				</div>
+				<aside>
+					<span class='nav'></span>
+				</aside>
+		    </li>
+ 			<li class='comp' >
+				<div id="navigatekilometer3">
+					<h3>Navigiere zu</h3>
+				</div>
+				<aside>
+					<span class='nav'></span>
+				</aside>
+			</li>
+			</ul>
+		  </section>
+		</article>
+
+<!--Login -->
+
+	<nav class="next">
+	  <button   class='back'>zurück</button>
+	  <h1>Anmelden</h1>
+	</nav>
+	<article id="login" class="next">
+	  <section>
+		<ul class='list' ui-implements='form'>
+			<li>
+			  <input autocorrect="off" autocapitalize="off" type="email" id="email_address" placeholder="Email Adresse" required>
+			</li>
+			 <li>
+			  <input type="password" id="password" placeholder="Passwort" required>
+        	</li>
+      	</ul>
+		<ul class='list' ui-implements='form'>
+		  <li id="rememberlogin" class='comp'>
+			<div>
+			  <label id='agreeRememberLabel' for='agreeToRemember'>Passwort merken.</label>
+			</div>
+			<aside>
+			  <span class='switch' id="agreeToRemember" class="off"><input type="checkbox"></span>
+			</aside>
+		  </li>
+		</ul>
+      <button class='action' id="submitRemember">Anmelden</a> </button>
+	  </section>
+	</article>
+
+	<!--Password forgotten -->
+
+		<nav class="next">
+		 <button   class='back'>zurück</button>
+		  <h1>Passwort</h1>
+		</nav>
+		<article id="forgotpassword" class="next">
+		  <section>
+			<ul class='list' ui-implements='form'>
+				<li>
+				<div>
+					<label id='passwordForgottenLabel' for='email_address2'>An folgende Adresse mein neues Passwort senden:</label>
+				</div>
+				  <input autocorrect="off" autocapitalize="off" type="email" id="email_address2" placeholder="Email Adresse" required>
+				</li>
+	      	</ul>
+	      <button class='action' id="submitRemember">Anfordern</a> </button>
+		  </section>
+	</article>
+<!--change Password -->
+
+	<nav class="next">
+	  <button   class='back'>zurück</button>
+	  <h1>Passwort</h1>
+	</nav>
+	<article id="changepassword" class="next">
+	  <section>
+		<ul class='list' ui-implements='form'>
+			<li>
+			  	<input autocorrect="off" autocapitalize="off" type="email" id="email_address3" placeholder="Email Adresse" required>
+			</li>
+			<li>
+			  	<input type="password" id="password1" placeholder="Passwort" required>
+        	</li>
+        	<li>
+				<input type="password" id="password2" placeholder="Passwort widerholen" required>
+        	</li>
+        	<li>
+				<input type="password" id="passwordneu" placeholder="neues Passwort" required>
+        	</li>
+		</ul>
+	  <button class='action' id="submitRemember">Ändern</a> </button>
+	  </section>
+	</article>
+
+<!--GoogleMaps Strecke Kilometer -->
+
+	<nav class="next">
+	 <button   class='back'>zurück</button>
+	  <h1>Karte</h1>
+<!--	  <button id="haupt3" class='align-flush'>Hauptmenü</button> -->
+	</nav>
+	<article id="GoogleMapsKilometer" class="next">
+	  <section>
+		<div id="googleMapKilo" ></div>
+	  </section>
+	</article>
+
+<!--GoogleMaps koordinate -->
+
+	<nav class="next">
+	<button   class='back'>zurück</button>
+	  <h1>Karte</h1>
+<!--	  <button id="haupt2" class='align-flush'>Hauptmenü</button> -->
+	</nav>
+	<article id="GoogleMapsCoordinate" class="next">
+	  <section>
+		<div id="googleMapCoord" ></div>
+	  </section>
+	</article>
+
+<!--GoogleMaps direct -->
+
+	<nav class="next">
+	 <button   class='back'>zurück</button>
+	  <h1>Karte</h1>
+	</nav>
+	<article id="GoogleMapsDirect" class="next">
+	  <section>
+		<div id="googleMapDirect" ></div>
+	  </section>
+	</article>
+
+<!--GoogleMaps manually -->
+
+	<nav class="next">
+	 <button   class='back'>zurück</button>
+	  <h1>Karte</h1>
+	</nav>
+	<article id="GoogleMapsManually" class="next">
+	  <section>
+		<div id="googleMapManually" ></div>
+	  </section>
+	</article>
+
+<!--GoogleMaps navigate -->
+
+	<nav class="next">
+	 <button   class='back'>zurück</button>
+	  <h1>Karte Navigation</h1>
+<!--	  <button id="haupt1" class='align-flush'>Hauptmenü</button>  -->
+	</nav>
+	<article id="GoogleMapsNavigate" class="next">
+	  <section>
+		<div id="googleNavigate" ></div>
+	  </section>
+	</article>
+
+
+	<script>
+	if ('serviceWorker' in navigator) {
+
+				  navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+				    alert( 'ServiceWorker wurde registriert:', registration.scope);
+				   }
+				  ).catch(function(err) {
+				    alert( 'ServiceWorker wurde leider nicht registriert.', err);
+
+				 });
+			}
+			window.onload = function() {
+
+/*				window.addEventListener('load', function(e) {
+
+				  window.applicationCache.addEventListener('updateready', function(e) {
+					if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+
+					  window.applicationCache.swapCache();
+					  updatePopup('Update', 'Eine neue Version ist verfügbar.<br>Soll diese jetzt heruntergeladen werden?');
+
+					}
+				  }, false);
+
+				}, false);-->*/
+			};
+			var globalStrecke=null;
+			var globalGleis=null;
+			var globalLattitude=50.092694;
+			var globalLongitude=8.6290777;
+			var myLattitude=50.092694;
+			var myLongitude=8.6290777;
+			var globalKilometer=null;
+			var globalHektometer=null;
+			var globalZoomLevel=18;
+			var globalMapType=google.maps.MapTypeId.ROADMAP;
+			var googleMap=0;
+			var openLayers=1;
+			var globalMap=googleMap;
+
+			var directionsDisplay = new google.maps.DirectionsRenderer;
+  			var directionsService = new google.maps.DirectionsService;
+
+
+			 var touchen='click';
+<!-- strecke kilometer--------------------------------------------------------------------------------------- -->
+			 var button1 = document.getElementById('navigatekilometer');
+				 button1.addEventListener('click', calculateKilometerNav, true);
+ 			 var button2 = document.getElementById('showmapkilometer');
+				 button2.addEventListener('touchstart', calculateKilometer, false);
+
+			 var button3 = document.getElementById('showmapsexagesimal');
+				 button3.addEventListener('touchstart', calculateSexagesimal, true);
+			 var button4 = document.getElementById('showlistsexagesimal');
+			   	 button4.addEventListener('touchstart', calculateSexagesimal, true);
+
+			 var button5 = document.getElementById('showmapdecimal');
+				 button5.addEventListener('touchstart', calculateDezimal, true);
+			 var button6 = document.getElementById('showlistdecimal');
+				 button6.addEventListener('touchstart', calculateDezimal, true);
+
+			 var button7 = document.getElementById('showmapposition');
+				 button7.addEventListener('touchstart', getLocation, true);
+
+			 var button8 = document.getElementById('showmapmanually');
+				 button8.addEventListener('touchstart', showDirect, true);
+
+
+
+			 var button14 = document.getElementById('navigatekilometer2');
+				 button14.addEventListener('click', calculateSexagesimalNav, true);
+			 var button15 = document.getElementById('navigatekilometer3');
+				 button15.addEventListener('click', calculateDezimalNav, true);
+
+			 $(document).ready(function(){
+                $('#termsofusetext').load('text/termsofuse.txt');
+                $('#licensetext').load('text/license.txt');
+             });
+
+
+showmapkilometer
+
+<!-- Segmentpanel -------------------------------------------------------------------------- -->
+ 		$(function() {
+			 var segmentedOptions = {
+				   id: 'mySegmented',
+				   labels : ['GoogleMaps','OpenLayers']
+			 };
+
+			 var getSelection = function(event) {
+				  var selection = $(event.target).index();
+				  renderMapSelection(selection);
+			 };
+
+			function renderMapSelection (index) {
+				 if(index==0){
+					globalMap=0;
+				 }else{
+					globalMap=1;
+				 }
+			};
+			renderMapSelection(0);
+
+			 var mapSegmentedCtrl = $.UICreateSegmented(segmentedOptions);
+
+			 $('#segmentedPanel').append(mapSegmentedCtrl);
+
+			$('#mySegmented').UISegmented({
+			  selected: 0,
+			  callback: getSelection
+
+			});
+		});
+<!-- end Segmentpanel -------------------------------------------------------------------------- -->
+			function backHaupt(){
+				 $.UIGoToArticle('#hauptmenue');
+			};
+
+			function calculateKilometer(event){
+				event.stopPropagation();
+				var strecke=document.getElementById('track').value;
+				var kilometer=document.getElementById('kilometer').value;
+
+				if(strecke==null || strecke.length>4 || strecke.length<4){
+
+					wrongValuesPopup();
+					$.UIGoToArticle('#streckekilometer');
+				}else if(kilometer==null){
+
+					wrongValuesPopup();
+					$.UIGoToArticle('#streckekilometer');
+				}else{
+					globalStrecke=strecke;
+					globalKilometer=kilometer;
+
+					send2Map('googleMapKilo');
+				}
+			};
+
+			function calculateKilometerNav(){
+
+				var strecke=document.getElementById('track').value;
+				var kilometer=document.getElementById('kilometer').value;
+
+				if(strecke==null || strecke.length>4 || strecke.length<4){
+					$.UIGoToArticle('#streckekilometer');
+					wrongValuesPopup();
+				}else if(kilometer==null){
+					$.UIGoToArticle('#streckekilometer');
+					wrongValuesPopup();
+				}else{
+					globalStrecke=strecke;
+					globalKilometer=kilometer;
+
+					send2Nav();
+				}
+			};
+
+			function calculateSexagesimalNav(){
+
+				var lattitude=document.getElementById('lattitudesexagesimal').value;
+				var longitude=document.getElementById('longitudesexagesimal').value;
+
+				if(lattitude==null || lattitude.length<=0 || longitude==null || longitude.length<=0){
+					$.UIGoToArticle('#sexagesimal');
+					wrongValuesPopup();
+				}
+				else{
+					globalLattitude=lattitude;
+					globalLongitude=longitude;
+					$.UIGoToArticle('#sexagesimal');
+					send2Nav();
+				}
+			};
+
+			function calculateDezimalNav(){
+
+				var lattitude=document.getElementById('lattitudedecimal').value;
+				var longitude=document.getElementById('longitudedecimal').value;
+
+				if(lattitude==null || lattitude.length<=0 || longitude==null || longitude.length<=0){
+					$.UIGoToArticle('#dezimal');
+					wrongValuesPopup();
+				}
+				else{
+					globalLattitude=lattitude;
+					globalLongitude=longitude;
+					$.UIGoToArticle('#dezimal');
+					send2Nav();
+				}
+			};
+
+			function calculateSexagesimal(){
+
+				var lattitude=document.getElementById('lattitudesexagesimal').value;
+				var longitude=document.getElementById('longitudesexagesimal').value;
+
+				if(lattitude==null || lattitude.length<=0 || longitude==null || longitude.length<=0){
+					$.UIGoToArticle('#sexagesimal');
+					wrongValuesPopup();
+				}
+				else{
+					globalLattitude=lattitude;
+					globalLongitude=longitude;
+					send2Map('googleMapCoord');
+				}
+			};
+
+
+
+			function calculateDezimal(){
+
+				var lattitude=document.getElementById('lattitudedecimal').value;
+				var longitude=document.getElementById('longitudedecimal').value;
+
+				if(lattitude==null || lattitude.length<=0 || longitude==null || longitude.length<=0){
+					$.UIGoToArticle('#dezimal');
+					wrongValuesPopup();
+				}
+				else{
+					globalLattitude=lattitude;
+					globalLongitude=longitude;
+
+					send2Map('googleMapCoord');
+				}
+			};
+
+			function showDirect(){
+				globalZoomLevel=7;
+				send2Map('googleMapManually');
+			};
+
+
+			function getLocation() {
+				getMyLocation;
+				globalLattitude=myLattitude;
+				globalLongitude=myLongitude;
+				showGoogleMap;
+			}
+			function getMyLocation(){
+				if (navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(showPosition, showError, {
+							enableHighAccuracy: true,
+							timeout: 5000,
+							maximumAge: 60000
+					});
+
+				} else {
+					errorPopup("Fehler", "Geolocation wird nicht von diesem Browser unterstützt");
+			    }
+			}
+
+
+			function showError(error) {
+			    switch(error.code) {
+			        case error.PERMISSION_DENIED:
+			        	errorPopup("Fehler", "Benutzer lehnte Standortabfrage a");
+			            break;
+			        case error.POSITION_UNAVAILABLE:
+			       		errorPopup("Fehler", "Standortdaten sind nicht verfügbar");
+			            break;
+			        case error.TIMEOUT:
+			        	errorPopup("Fehler", "Die Standortabfrage dauerte zu lange (Time-out)");
+			            break;
+			        case error.UNKNOWN_ERROR:
+			        	errorPopup("Fehler", "unbekannter Fehler");
+			            break;
+			    }
+			}
+
+			function showPosition(position){
+					myLattitude= position.coords.latitude;
+    				myLongitude= position.coords.longitude;
+
+			}
+
+
+
+			function getCoordinate4strecke(){
+
+			};
+
+			function send2Map(mapid){
+
+				if(globalMap==googleMap){
+					showGoogleMap(mapid);
+				}else{
+					showOpenLayers(mapid);
+				}
+			};
+
+			function send2Nav(){
+				calcRoute();
+			};
+
+			function send2List(){
+
+			};
+
+<!-- koordinate--------------------------------------------------------------------------------------- -->
+
+<!-- google maps-------------------------------------------------------------------------------------- -->
+
+
+  	function showGoogleMap(mapid) {
+
+		var myCenter=new google.maps.LatLng(globalLattitude, globalLongitude);
+		var marker=new google.maps.Marker({
+		  position:myCenter,
+  		  icon:'bilder/pin_48.png'
+	  	});
+
+	  var infowindow = new google.maps.InfoWindow({
+
+	    content:buildBubble()
+  		});
+
+	    google.maps.visualRefresh = true;
+	      var isMobile = (navigator.userAgent.toLowerCase().indexOf('android') > -1) ||
+	        (navigator.userAgent.match(/(iPod|iPhone|iPad|BlackBerry|Windows Phone|iemobile)/));
+	      if (isMobile) {
+	        var viewport = document.querySelector("meta[name=viewport]");
+	        viewport.setAttribute('content', 'initial-scale=1.0, user-scalable=no');
+	      }
+	      var mapDiv = document.getElementById(mapid);
+	      var height=window.screen.availHeight;
+	      var width=window.screen.availWidth;
+	      var ori=window.orientation;
+
+	      mapDiv.style.width = width+'px';
+	      mapDiv.style.height = height+'px';
+
+	  var mapProp ={
+	    center:myCenter,
+	    zoom:globalZoomLevel,
+	    panControl:false,
+		 zoomControl: true,
+		 zoomControlOptions: {
+		    position: google.maps.ControlPosition.LEFT_TOP
+    	},
+		mapTypeControl:true,
+		mapTypeControlOptions: {
+		    style:google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+		    position:google.maps.ControlPosition.TOP_CENTER
+		},
+		scaleControl:false,
+		streetViewControl:false,
+		overviewMapControl:false,
+		rotateControl:false,
+	    mapTypeId:google.maps.MapTypeId.ROADMAP
+	  };
+	  var map=new google.maps.Map(mapDiv, mapProp);
+	  map.setTilt(0);
+	  marker.setMap(map);
+	  infowindow.open(map,marker);
+	  map.addListener('click', function(e) {
+	  	    doubleClick(e.latLng, map, marker);
+	  });
+	}
+
+	function showGoogleMapNav() {
+
+	}
+
+	function doubleClick(latLng, map, marker) {
+	  	marker.setPosition(latLng);
+	  	map.setZoom(globalZoomLevel);
+	 	map.setCenter(latLng);
+	}
+
+	function buildBubble(){
+		var txt="<p>Strecke: ";
+		if(globalStrecke!=null){
+			txt+=globalStrecke;
+		}
+		txt+="<br>";
+		txt+="Gleis: ";
+		if(globalGleis!=null){
+			txt+=globalGleis;
+		}
+		txt+="<br>";
+		txt+="Kilometer: ";
+		if(globalKilometer!=null){
+			txt+=globalKilometer;
+		}
+		txt+="</p>";
+		return txt;
+	}
+<!-- show googlemaps route------------------------------------------------------------------------------------------- -->
+   function calcRoute(){
+
+    window.location = protocol + 'maps.apple.com/maps?daddr=' + globalLattitude + ',' + globalLongitude + '&amp;ll=';
+	   var ios=false;
+	   var iosVersion=0;
+	   var protocol = 'http://';
+       if ((navigator.platform.indexOf("iPhone") > -1)
+       		|| (navigator.platform.indexOf("iPod") > -1)
+       		|| (navigator.platform.indexOf("iPad") > -1)) {
+       		ios=true;
+       }
+       if(ios==true){
+         iosVersion = iOSVersion()
+         if (iosVersion[0] >= 6) {
+		    protocol = 'maps://';
+         }
+         window.location = protocol + 'maps.apple.com/maps?daddr=' + globalLattitude + ',' + globalLongitude + '&amp;ll=';
+       }
+       else {
+         window.open(protocol +'maps.google.com?daddr=' + globalLattitude + ',' + globalLongitude + '&amp;ll=');
+       }
+   }
+
+
+ 	function iOSVersion() {
+ 		var iosVersion=0;
+	  	if(window.navigator.userAgent.match( /iP(hone|od|ad)/)){
+	       iosVersion=parseFloat(String(window.navigator.userAgent.match(/[0-9]_[0-9]/)).split('_')[0]+'.'+String(window.navigator.userAgent.match(/[0-9]_[0-9]/)).split('_')[1]);
+		}
+		return iosVersion;
+	 }
+
+
+
+<!-- show openlayers------------------------------------------------------------------------------------------- -->
+function showOpenLayers(mapid) {
+
+	var lat            = globalLattitude;
+    var lon            = globalLongitude;
+    var zoom           = 18;
+
+    var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
+    var toProjection   = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
+    var position       = new OpenLayers.LonLat(lon, lat).transform( fromProjection, toProjection);
+
+	var mapDiv = document.getElementById(mapid);
+	var height=window.screen.availHeight;
+	var width=window.screen.availWidth;
+	var ori=window.orientation;
+
+	mapDiv.style.width = width+'px';
+	mapDiv.style.height = height+'px';
+
+    map = new OpenLayers.Map(mapid);
+    var mapnik         = new OpenLayers.Layer.OSM();
+    map.addLayer(mapnik);
+
+
+	var markers = new OpenLayers.Layer.Markers( "Markers" );
+	map.addLayer(markers);
+
+	var size = new OpenLayers.Size(32,32);
+	var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
+	var icon = new OpenLayers.Icon('bilder/pin_48.png', size, offset);
+	markers.addMarker(new OpenLayers.Marker(position,icon));
+	markers.addMarker(new OpenLayers.Marker(position,icon.clone()));
+
+    map.setCenter(position, zoom);
+
+	OpenLayers.Control.Click = OpenLayers.Class(OpenLayers.Control, {
+		 defaultHandlerOptions: {
+		 'single': true,
+		 'double': true,
+		 'pixelTolerance': 0,
+		 'stopSingle': false,
+		 'stopDouble': false
+		 },
+		 handleRightClicks:true,
+		 initialize: function(options) {
+		 this.handlerOptions = OpenLayers.Util.extend(
+		 {}, this.defaultHandlerOptions
+		 );
+		 OpenLayers.Control.prototype.initialize.apply(
+		 this, arguments
+		 );
+		 this.handler = new OpenLayers.Handler.Click(
+		 this, this.eventMethods, this.handlerOptions
+		 );
+		 },
+		 CLASS_NAME: "OpenLayers.Control.Click"
+	});
+
+	var oClick = new OpenLayers.Control.Click({eventMethods:{
+
+	 'click': function(e) {
+	 	var lonlat = map.getLonLatFromViewPortPx(e.xy);
+
+	  	markers.clearMarkers();
+	  	map.panTo(lonlat);
+	  	markers.addMarker(new OpenLayers.Marker(lonlat,icon.clone()));
+
+	 },
+
+	}});
+	map.addControl(oClick);
+	oClick.activate();
+
+
+
+}
+
+
+<!-- popups------------------------------------------------------------------------------------------- -->
+			function  wrongValuesPopup(){
+			  $.UIPopup({
+				selector: "#main",
+				id: "warning",
+				title: 'Eingabefehler',
+				message: 'Werte entsprechen nicht der vorgegebenen Syntax',
+				cancelButton: 'Abbrechen',
+				callback:function(){
+					$.UIGoToArticle('#streckekilometer');
+				}
+			  });
+			}
+
+			function  errorPopup(titleText, titleMessage){
+			  $.UIPopup({
+				selector: "#main",
+				id: "warning",
+				title: titleText,
+				message: titleMessage,
+				cancelButton: 'Abbrechen',
+
+			  });
+			}
+
+			function  updatePopup(titleText, titleMessage){
+			  $.UIPopup({
+				selector: "#main",
+				id: "warning",
+				title: titleText,
+				message: titleMessage,
+				cancelUIButton: 'nein',
+				continueUIButton: 'ja',
+				callback:function(){
+					window.location.reload();
+				}
+			  });
+			}
+
+
+		</script>
+
+
+	</body>
+</html>

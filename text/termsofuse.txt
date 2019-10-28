@@ -1,0 +1,59 @@
+﻿<p><b>Lizenzbedingungen</b></p> 
+
+<p><b>GNRaiLNav-OrtungLive</b></p>  
+
+<p><b>Funktion</b></p>  
+
+GNRaiLNav-OrtungLive bietet die Möglichkeit, Positionsangaben in Kilometrierungen der DB Netz AG umzurechnen und umgekehrt. Positionsangaben sind Koordinaten (z. B. Geografische Breite und Länge) oder die GNSS-Standortinformation des mobilen Endgerätes (Gerätefunktion). Kilometrierungen sind die Angaben zu DB-Streckennummer und Kilometer bzw. Entfernungen von Weichen bei Bahnhofsgleisen. 
+
+<p><b>Versionen </b></p>  
+
+GNRaiLNav-OrtungLive steht als App („GNRaiLNav-OrtungLive free“ bzw. „GNRaiLNav-OrtungLive professional“) für Android Betriebssysteme und als html-web-sites („GNRaiLNav-OrtungLive office“) zur Verfügung. 
+
+<p><b>Assistenzanwendung</b></p>   
+
+GNRaiLNav-OrtungLive ist eine Assistenzanwendung, welche den Nutzer bei der Ermittlung der Relation Position-Kilometrierung unterstützt. Die Funktionalitäten und die Richtigkeit der Datenbasis wurden sorgfältig geprüft. Dennoch kann keinerlei Garantie für Funktionalitäten und die Richtigkeit der Ergebnisse übernommen werden. 
+Der Nutzer ist gehalten, alle Ergebnisse mit zusätzlichen Datenquellen vor deren Weiterverwendung auf Richtigkeit zu überprüfen. Der Nutzer stellt die Anbieter und Entwickler von allen Regressansprüchen im Zusammenhang mit dieser Anwendung und den daraus gewonnenen Ergebnissen frei. Dies gilt auch für Regressansprüche, die durch die Verwendung der Ergebnisse in Folgemaßnahmen entstanden sind. 
+
+<p><b>Gleisnetzdaten </b></p>  
+
+Eine Garantie für Vollständigkeit, Richtigkeit und Aktualität der Gleisnetzdaten wird nicht übernommen. 
+
+<p><b>Verfügbarkeit</b></p>  
+
+Eine Mindestverfügbarkeit der Anwendungen kann nicht gewährleistet werden. Die Entwickler sind bemüht, Störungen spätestens am vierten Werktag zu beheben. 
+
+<p><b>GNRaiLNav-OrtungLive free Lizenz</b> </p>  
+
+GNRaiLNav-OrtungLive free steht als App mit dem selben Funktionaumfang wie GNRaiLNav-OrtungLive professional, jedoch nur für einen begrenzten Lizenzzeitraum zur Verfügung. Dieser Lizenzzeitraum wird im Zuge der Installation angegeben. GNRaiLNav-OrtungLive free kann auf einem Endgerät nur einmalig installiert werden. Nach Ablauf des Lizenzzeitraums kann GNRaiLNav-OrtungLive free auf demselben Endgerät nicht mehr genutzt werden. Ein Upgrade auf die GNRaiLNav-OrtungLive professional Lizenz ist jederzeit während oder nach Ablauf des Lizenzzeitraums möglich. Der Nutzer stimmt zu, dass bei der Installation ein gerätespezifisches Identifikationsmerkmal des Endgerätes ausgelesen und beim Betreiber zur Lizenzüberwachung dauerhaft gespeichert wird. 
+<p><b>GNRaiLNav-OrtungLive professional Lizenz </b> </p>  
+GNRaiLNav-OrtungLive professional ist an den Erwerb einer kostenpflichtigen Lizenz gebunden. Im Zuge des Erwerbs der Lizenz erhält der Nutzer einen Lizenzcode, mit dem GNRaiLNav-OrtungLive professional für einen begrenzten Zeitraum freigeschaltet werden kann. Der Lizenzcode ist vom Nutzer zu archivieren, da er seitens der Anbieter von GNRaiLNav-OrtungLive professional nur einmalig bereitgestellt wird. Der Lizenznehmer hat keinen Anspruch auf einen neuen Lizenzcode, wenn dieser abhanden gekommen ist oder ein Dritter Zugang zum Code hatte und die Lizenz somit für den rechtmäßigen Nutzer nicht mehr brauchbar ist. Der Nutzer stimmt zu, dass bei der Installation ein gerätespezifisches Identifikationsmerkmal des Endgerätes ausgelesen und beim Betreiber zur Lizenzüberwachung dauerhaft gespeichert wird. 
+
+Die Laufzeit der Lizenz beträgt 12 Monate ab erstmaliger Eingabe des Lizenzschlüssels durch den Nutzer. Die Gültigkeit der Lizenz endet spätestens 18 Monate nach dem Kauf, unabhängig davon, ob die Lizenz bis dahin vollständig, teilweise oder gar nicht genutzt wurde. Nicht genutzte Lizenzzeiten verfallen und es erfolgt keine, auch keine teilweise Rückerstattung der Lizenzkosten.
+
+Die Lizenz ist mit dem Lizenzcode an das jeweilige Endgerät gebunden. Beim Wechsel des Endgerätes kann der Lizenzcode während der Installation von GNRaiLNav-OrtungLive auf ein neues Endgerät übertragen werden. Die Freischaltung von GNRaiLNav-OrtungLive professional auf dem neuen Endgerät kann einige Wochen dauern, längstens jedoch so lange, wie der Nutzungszeitraum von GNRaiLNav-OrtungLive free definiert ist. Damit ist sichergestellt, dass die App bis zur erneuten Freischaltung durch die Nutzung von GNRaiLNav-OrtungLive free im vollen Leistungsumfang zur Verfügung steht. Dabei ist zu beachten, dass GNRaiLNav-OrtungLive free bis dahin noch nicht auf dem neuen Endgerät installiert gewesen sein darf. Die Überbrückung mit GNRaiLNav-OrtungLive-free führt weder zu einer Verlängerung der Lizenzlaufzeit für die GNRaiLNav-OrtungLive professional Lizenz noch zu einem Erstattungsanspruch. Der Wechsel auf ein neues Endgerät ist während der Laufzeit der Lizenz höchstens  einmal möglich. 
+
+<p><b>Betriebssystem</b></p>  
+
+Es wird keine Garantie für die Lauffähigkeit von GNRaiLNav-OrtungLive auf Endgeräten mit anderen als den in den Systemanforderungen angegebenen Versionen des eingesetzten Betriebssystems oder mit herstellerspezifischen Modifikationen des Betriebssystems gegeben. Die Lauffähigkeit von GNRaiLNav-OrtungLive professional kann vorab mit GNRaiLNav-OrtungLive free auf dem jeweiligen Endgerät getestet werden. 
+<p><b>GNRaiLNav-OrtungLive-office Lizenz </b> </p>  
+GNRaiLNav-OrtungLive office ist für den Einsatz ohne mobiles Endgerät konzipiert. Es eignet sich für die Verwendung im Browser auf Desktop-Rechnern. Standortdienste (z. B. eigene GPS-Position, …) werden in dieser Anwendung nicht unterstützt. 
+GNRaiLNav-OrtungLive office ist an den Erwerb einer kostenpflichtigen Lizenz gebunden. Im Zuge des Erwerbs der Lizenz erhält der Nutzer einen Lizenzcode, mit dem GNRaiLNav-OrtungLive office für einen begrenzten Zeitraum freigeschaltet werden kann. Der Lizenzcode ist vom Nutzer zu archivieren, da er seitens der Anbieter von GNRaiLNav-OrtungLive office nur einmalig bereitgestellt wird. Der Lizenznehmer hat keinen Anspruch auf einen neuen Lizenzcode, wenn dieser abhanden gekommen ist oder ein Dritter Zugang zum Code hatte und die Lizenz somit für den rechtmäßigen Nutzer nicht mehr brauchbar ist. Die Lizenz kann zu einem Zeitpunkt immer nur von einem Nutzer genutzt werden. 
+
+<p><b>Robot-Anwendungen </b></p>  
+
+Dem Nutzer ist es untersagt, GNRaiLNav-OrtungLive in andere datenverarbeitende Prozesse zu integrieren, automatisierte Funktionen zu generieren oder Daten automatisiert auszulesen. 
+
+<p><b>Hintergrundkarten, -pläne, -fotos</b></p>  
+
+GNRaiLNav-OrtungLive ermöglicht es, Hintergrundkarten oder Luftbilder zu integrieren. 
+Derartige Daten und eventuell mit diesen Datenplattformen verbundene Funktionalitäten sind nicht Bestandteil von GNRaiLNav-OrtungLive und insbesondere nicht in den Lizenzen von GNRaiLNav-OrtungLive enthalten. Der Nutzer von GNRaiLNav-OrtungLive verpflichtet sich, die Rechte zur Nutzung von Hintergrunddaten oder Luftbildern und damit verbundenen Funktionalitäten von den entsprechenden Rechteinhaber selbst zu erwerben. Der Nutzer stellt die Entwickler von eventuellen Regressforderungen dieser Rechteinhaber frei. Die Entwickler behalten sich vor, Hintergrundkarten und/oder Luftbilder und/oder damit verbundene Funktionalitäten gegen andere Inhalte oder Plattformen auszutauschen oder diese Option vollständig zurück zu nehmen, ohne dass der Nutzer ein Widerspruchsrecht hat oder einen Regressanspruch daraus ableiten kann. 
+
+<p><b>Anwendbares Recht, Gerichtsstand</b></p>  
+
+Es gilt das Recht der Bundesrepublik Deutschland. <br>
+Gerichtsstand ist Hannover.<br> 
+
+<p><b>Salvatorische Klausel</b> </p>  
+
+Sollte eine Bestimmung dieser Lizenzbedingung ungültig sein oder werden, wird dadurch die Vereinbarung im Übrigen nicht berührt. Der Anbieter behält sich vor, ungültige Bestimmungen durch neue, dem beabsichtigten Ziel möglichst gleich kommende, zu ersetzen.

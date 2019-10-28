@@ -1,0 +1,28 @@
+﻿<p><b>Hinweise zum Datenschutz</b></p>
+
+<p><b>GNRaiLNav-OrtungLive</b></p>
+
+
+Auf Servern der Geo++ GmbH werden im Zusammenhang mit der Nutzung der GNRaiLNav-OrtungLive-Anwendungen nur Nutzerdaten gespeichert, die für die Überwachung der Lizenzbedingungen, die Abrechnung der Lizenzgebühren sowie den Betrieb der Anwendungen benötigt werden. Bis auf die Abrechnungsdaten für Mitarbeiter der Deutsche Bahn AG, die nur an die DB-Netz AG weitergeleitet werden, werden keine Daten an Dritte weitergegeben.<br>
+
+Für die Überwachung der Lizenzbedingungen wird bei erstmaliger Nutzung einer der Smartphone-Anwendungen auf einem der Geo++ GmbH bisher unbekannten Endgerät ein Hardware-Fingerprint ausgelesen und zusammen mit dem Datum der erstmaligen Nutzung dauerhaft auf Servern der Geo++ GmbH gespeichert.<br>
+
+Bei den Produkten GNRaiLNav-OrtungLive Professional sowie GNRaiLNav-OrtungLive Office werden zusätzlich folgende Daten zur Überwachung der Lizenzbedingungen gespeichert:<br>
+- der Lizenzschlüssel<br>
+- das Kaufdatum<br>
+- das Datum der erstmaligen Nutzung des Lizenzschlüssels<br>
+und ggf. bei Endgerätewechsel<br>
+- das Datum an dem der Lizenzschlüssel in einem neuen Endgerät eingegeben wurde<br>
+
+Bei allen GNRaiLNav-OrtungLive-Anwendungen können die abgefragten Positionen bzw. Streckenkilometer und Abfragezeiten gespeichert werden, um einen möglichen Missbrauch der GN_RaiLNav Anwendungen im Sinne der Lizenzvereinbarung zu erkennen. Es erfolgt keine über die Überwachung der Lizenzbedingungen hinausgehende Auswertung und keine Weitergabe für andere Zwecke.<br>
+
+Für den Betrieb und die Wartung der GNRaiLNav-OrtungLive-Anwendungen, sowie des Nutzerportals, werden Nutzeranfragen, die zu Fehlern geführt haben, gespeichert. Für den Betrieb des Nutzerportals sowie der GNRaiLNav-OrtungLive-Anwendungen werden folgende Anmelde- und Kontaktinformationen gespeichert:<br>
+- Email-Adresse<br>
+- ggf. Nutzername<br>
+- ggf. verschlüsseltes Passwort<br>
+
+Mitarbeiter der Deutschen Bahn können Lizenzen unter Angabe von Email-Adresse und selbst zu erfassenden bahninternen Verrechnungsdaten erwerben. Diese Daten werden von der Geo++ GmbH auf Servern der Geo++ GmbH gespeichert und ausschließlich an die DB-Netz AG weitergeleitet.<br>
+
+Der Erwerb der Lizenzen erfolgt für nicht DB-Mitarbeiter über die Digital River GmbH. Bitte beachten Sie daher die AGB und die Hinweise zum Datenschutz der Digital River GmbH.<br>
+
+Die Nutzung der GNRaiLNav-OrtungLive-Anwendungen bedingt ihr Einverständnis mit diesem Vorgehen und den oben genannten Datenspeicherungen. Am Ende des Anmeldeprozesses oder der Installation werden sie aufgefordert, den Lizenzbedingungen und diesen Regelungen zum Datenschutz zuzustimmen.<br>

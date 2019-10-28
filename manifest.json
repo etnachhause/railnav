@@ -1,0 +1,48 @@
+{
+  "name": "railnav2",
+  "short_name": "railnav2",
+  "description": "my first PWA",
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "lang": "de-de",
+
+  "icons": [
+  {
+      "src": "bilder/railnav.png",
+      "sizes": "128x128",
+      "type": "image/png"
+   },
+   {
+         "src": "bilder/railnav_57.png",
+         "sizes": "57x57",
+         "type": "image/png"
+   },
+   {
+         "src": "bilder/railnav_72.png",
+         "sizes": "72x72",
+         "type": "image/png"
+   },
+   {
+         "src": "bilder/railnav_114.png",
+         "sizes": "114x114",
+         "type": "image/png"
+   },
+   {
+         "src": "bilder/geopp.png",
+         "sizes": "128x128",
+         "type": "image/png"
+   },
+   {
+         "src": "bilder/pin.png",
+         "sizes": "128x128",
+         "type": "image/png"
+   },
+   {
+      "src": "bilder/railnav_144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+   }
+   ]
+   
+}
